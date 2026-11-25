@@ -1,0 +1,100 @@
+{
+  "task_id": 7,
+  "title": "Оценка эффективности внедрения информационной системы",
+  "student_name": "Глазков Тимофей Владимирович",
+  "group": "БИ ОЗФО5-1",
+  "organization": "Государственное учреждение",
+  "system_name": "Информационная система для автоматизации документооборота",
+  "horizon_years": 5,
+  "discount_rate": 0.1,
+  "profit_tax_rate": 0.2,
+  "investments": {
+    "development_and_implementation": 35.0,
+    "equipment": 15.0,
+    "staff_training": 5.0
+  },
+  "annual_costs": {
+    "software_licenses": 3.0,
+    "technical_support": 2.0,
+    "administration": 4.0
+  },
+  "annual_benefits": {
+    "staff_time_savings": 8.0,
+    "paper_and_printing_savings": 2.0,
+    "error_reduction": 3.0,
+    "process_acceleration": 2.0,
+    "citizen_satisfaction_non_cash": 1.0
+  },
+  "equipment_depreciation_years": 5,
+  "sensitivity": {
+    "discount_rates": [
+      0.08,
+      0.1,
+      0.14
+    ],
+    "time_savings_multipliers": [
+      0.8,
+      1.0,
+      1.2
+    ],
+    "development_cost_multipliers": [
+      0.8,
+      1.0,
+      1.2
+    ]
+  },
+  "modeling_choices": {
+    "non_cash_benefit_excluded_from_cash_flow": true,
+    "cash_benefits_note": "Выгоды гражданской удовлетворённости показываются отдельно и не включаются в денежный поток без денежной оценки.",
+    "irr_method": "бисекция на интервале ставок от -99,9% до 1000%",
+    "salvage_value_at_end": 0.0,
+    "include_non_cash_benefit_in_cash_flow": false,
+    "non_cash_benefit_usage_note": "Если учреждение обосновало денежный эквивалент, установите true. Значение citizen_satisfaction_non_cash будет включено в ежегодные денежные выгоды."
+  },
+  "analysis_targets": {
+    "npv_zero_rub_mln": 0.0,
+    "npv_profit_rub_mln": 10.0,
+    "main_lever": "staff_time_savings",
+    "note": "Целевой положительный NPV можно изменить, например, на 5 или 20 млн руб.; Notebook пересчитает требуемую экономию времени."
+  },
+  "scenario_analysis": {
+    "one_lever_change": 0.2,
+    "time_savings_multipliers": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      4.0
+    ],
+    "development_cost_multipliers": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "annual_cost_multipliers": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "other_benefits_multipliers": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "combined_plan": {
+      "development_multiplier": 0.8,
+      "annual_cost_multiplier": 0.8,
+      "other_benefits_multiplier": 1.0,
+      "description": "Снижение стоимости разработки и ежегодных расходов на 20%; экономия времени рассчитывается до целевого NPV."
+    }
+  }
+}

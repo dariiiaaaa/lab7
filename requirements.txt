@@ -1,0 +1,6 @@
+jupyter
+nbconvert
+numpy
+pandas
+matplotlib
+python-docx
